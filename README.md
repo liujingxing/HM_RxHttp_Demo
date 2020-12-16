@@ -2,4 +2,4 @@
 RxHttp 鸿蒙版 Demo
 
 
-[RxHttp Demo 点这里](https://github.com/liujingxing/okhttp-RxHttp)
+[RxHttp 源码点这里](https://github.com/liujingxing/okhttp-RxHttp)
