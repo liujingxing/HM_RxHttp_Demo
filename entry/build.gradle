@@ -1,0 +1,38 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    compileSdkVersion 4
+    defaultConfig {
+        compatibleSdkVersion 3
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [
+                        rxhttp_rxjava: 'rxjava3'     //可传入rxjava2、rxjava3
+                ]
+            }
+        }
+
+        sourceSets {
+            main {
+                java {
+                    srcDir 'build/generated/source/annotation/debug' // 指定源码目录
+                }
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    testCompile 'junit:junit:4.12'
+    implementation 'com.google.android:android:4.1.1.4'
+    implementation 'com.ljx.rxhttp:rxhttp:2.5.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+
+    implementation 'com.ljx.rxlife3:rxlife-rxjava:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.6'
+
+    annotationProcessor 'com.ljx.rxhttp:rxhttp-compiler:2.5.1'
+}
